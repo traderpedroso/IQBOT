@@ -88,7 +88,7 @@ def train_data(symbol,timeframe):
     df.fillna(method="ffill", inplace=True)
     df = df.loc[~df.index.duplicated(keep = 'first')]
     
-    
+    # indicators
     df = Indicators(df)
     
     
